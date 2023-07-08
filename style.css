@@ -1,0 +1,171 @@
+:root {
+	--gradient-start: hsl(6, 100%, 80%);
+	--gradient-end: hsl(335, 100%, 65%);
+	--pale-blue: hsl(243, 100%, 93%);
+	--grayish-blue: hsl(229, 7%, 55%);
+	--dark-blue: hsl(228, 56%, 26%);
+	--very-dark-blue: hsl(229, 57%, 11%);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	background-image: url(images/bg-mobile.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: "Raleway", sans-serif;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	gap: 1.6rem;
+}
+
+.card {
+	background-color: var(--dark-blue);
+	width: 86%;
+	border-radius: 1rem;
+}
+
+.card-logo {
+	border-top-right-radius: 10rem;
+	padding: 4rem;
+}
+
+.h-box-1 {
+	margin-top: 30px;
+	display: flex;
+	gap: 16px;
+}
+
+.btn {
+	background-color: var(--very-dark-blue);
+	padding: 15px;
+	border-radius: 0.625rem;
+	display: flex;
+	justify-content: center;
+}
+
+/* Storeage section - Card 2 */
+
+.card-storage {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 4rem 2rem 5rem 2rem;
+	position: relative;
+}
+.progress-bar {
+	content: "";
+	width: 262px;
+	height: 20px;
+	border-radius: 10px;
+	background-color: var(--very-dark-blue);
+	margin: 1rem 0;
+}
+.progress-bar-color {
+	content: "";
+	width: 193px;
+	height: 14px;
+	margin-top: 3px;
+	margin-left: 3px;
+	background: linear-gradient(90deg, #ffa197 0%, #ff4a95 100%);
+	border-radius: 10px;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.description {
+	color: var(--pale-blue);
+	font-size: 1.3rem;
+}
+
+.ball {
+	content: "";
+	background-color: white;
+	height: 10px;
+	width: 10px;
+	border-radius: 50%;
+	margin: 2px 2px 1px;
+}
+
+.h-box-2 {
+	color: var(--pale-blue);
+	display: flex;
+	justify-content: space-between;
+	width: 262px;
+}
+
+.floating-msg-container {
+	position: absolute;
+	margin-top: 85px;
+}
+
+.msg {
+	background-color: white;
+	border-radius: 10px;
+	padding: 1.2rem 2.6rem;
+}
+
+.msg strong {
+	font-size: 4rem;
+	color: var(--very-dark-blue);
+}
+
+.msg span {
+	font-size: 12px;
+	color: var(--grayish-blue);
+	margin-left: 9px;
+}
+
+/* Media queries */
+
+@media screen and (min-width: 1440px) {
+	body {
+		background-image: url(/images/bg-desktop.png);
+		background-size: contain;
+		background-position-y: bottom;
+		background-color: var(--very-dark-blue);
+	}
+
+	.container {
+		flex-direction: row;
+		width: 60%;
+		margin: 0 auto;
+	}
+
+	.floating-msg-container {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		left: unset;
+		right: 3rem;
+	}
+
+	.msg {
+		left: 0;
+		border-bottom-right-radius: 0;
+	}
+
+	.triangle {
+		display: block;
+		width: 0;
+		height: 0;
+		border-right: 10px solid white;
+		border-top: 10px solid white;
+		border-left: 10px solid transparent;
+		border-bottom: 10px solid transparent;
+	}
+}
