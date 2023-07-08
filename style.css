@@ -152,6 +152,7 @@ body {
 		align-items: flex-end;
 		left: unset;
 		right: 3rem;
+		top: -90%;
 	}
 
 	.msg {
